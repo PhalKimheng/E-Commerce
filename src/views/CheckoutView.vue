@@ -1,6 +1,8 @@
 <template>
   <div class="checkout">
-    <h1>This is a checkout page</h1>
+    <h1>This is an checkout page</h1>
+    <br />
+    <button @click="$emit('cancel')">Cancel</button>
   </div>
 </template>
 
@@ -8,8 +10,6 @@
 @media (min-width: 1024px) {
   .checkout {
     min-height: 100vh;
-    display: flex;
-    align-items: center;
   }
 }
 </style>
