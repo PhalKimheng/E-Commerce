@@ -13,35 +13,51 @@
                     <img class="icon" src="@/assets/images/down.png">
                     <span>USD</span>
                     <img class="icon" src="@/assets/images/down.png">
-                    <span>Login</span>
-                    <img class="icon" src="@/assets/images/user.png">
-                    <span>Wishlist</span>
-                    <img class="icon" src="@/assets/images/love.png">
-                    <img id="cartIcon" src="@/assets/images/cart.png">
+                    <router-link :to="{ path: '/login' }">
+                        <span>Login</span>
+                        <img class="icon" src="@/assets/images/user.png">
+                    </router-link>
+                    <router-link :to="{ path: '/wishlist' }">
+                        <span>Wishlist</span>
+                        <img class="icon" src="@/assets/images/love.png">
+                    </router-link>
+                    <router-link :to="{ path: '/cart' }">
+                        <img id="cartIcon" src="@/assets/images/cart.png">
+                    </router-link>
+
                 </div>
             </nav>
             <nav class="navbar navbar-expand-lg py-3 px-5">
                 <div class="container-fluid">
-                    <a class="navbar-brand fw-bolder" href="#">C H A M A</a>
+                    <router-link :to="{ path: '/' }">
+                        <a class="navbar-brand fw-bolder" href="#">C H A M A</a>
+                    </router-link>
                     <div class="collapse navbar-collapse" id="navbarScroll">
                         <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
                             <li class="nav-item">
-                                <a class="nav-link text-danger" aria-current="page" href="#">Home</a>
+                                <router-link :to="{ path: '/' }">
+                                    <a class="nav-link text-danger" aria-current="page" href="#">Home</a>
+                                </router-link>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Pages</a>
+                                <router-link :to="{ path: '/product' }">
+                                    <a class="nav-link" href="#">Products</a>
+                                </router-link>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Products</a>
+                                <router-link :to="{ path: '/blog' }">
+                                    <a class="nav-link" href="#">Blog</a>
+                                </router-link>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Blog</a>
+                                <router-link :to="{ path: '/shop' }">
+                                    <a class="nav-link" href="#">Shop</a>
+                                </router-link>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Shop</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Contact</a>
+                                <router-link :to="{ path: '/contact' }">
+                                    <a class="nav-link" href="#">Contact</a>
+                                </router-link>
                             </li>
                         </ul>
                         <form class="d-flex" role="search">
@@ -54,9 +70,12 @@
             </nav>
         </div>
     </header>
-
-    <RouterView />
 </template>
+<script>
+export default {
+    // name: "Header"
+}
+</script>
 <style scoped>
 #lampImg {
     width: 140px;
@@ -94,9 +113,8 @@ span {
     margin-left: 5px;
     margin-right: 5px;
 }
+
+a {
+    text-decoration: none;
+}
 </style>
-<script>
-    export default {
-        name: "Header"
-    }
-</script>

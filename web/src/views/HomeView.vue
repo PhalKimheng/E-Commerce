@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Header/>
     <div class="body1">
       <div class="box1">
         <div class="child1">
@@ -16,13 +17,21 @@
             type="button">Shop Now</button>
         </div>
       </div>
-      <div class="box2" v-for="row in productRows" :key="row[0]">
+      <!-- Fetch from api -->
+      <!-- <div class="box2" v-for="row in productRows" :key="row[0]">
         <span
           style="width: 50%; height: 75%; display: flex; align-items: center; background-color: #FFD6EC; border-radius: 100%;">
           <img v-for="product in row" :key="product" style="margin-left: 25px;" id="chairOne" :src="product.pictureUrl"
             alt="chairOne">
         </span>
+      </div> -->
+      <div class="box2">
+        <span
+          style="width: 50%; height: 75%; display: flex; align-items: center; background-color: #FFD6EC; border-radius: 100%;">
+          <img style="margin-left: 25px;" id="chairOne" src="@/assets/images/chairOne.png" alt="chairOne">
+        </span>
       </div>
+
     </div>
     <div class="body2">
       <h2 style="color: #144272">Featured Products</h2>
@@ -105,36 +114,44 @@
         </div>
       </div>
     </div>
+    <Footer/>
   </div>
 </template>
 <script>
+import Header from '../components/HeaderPage.vue'
+import Footer from '../components/FooterPage.vue'
+
 import { onMounted, computed, ref } from 'vue';
 import axios from 'axios';
 export default {
-  name: 'Shopping-item',
+  name: 'HomeView',
+  components: {
+    Header,
+    Footer
+  },
 
-  setup() {
-    const products = ref([]);
+  // setup() {
+  //   const products = ref([]);
 
-    onMounted(async () => {
-      try {
-        const response = await axios.get('http://localhost:8081/');
-        products.value = response.data;
-      } catch (err) {
-        console.error(err);
-      }
-    });
+  //   onMounted(async () => {
+  //     try {
+  //       const response = await axios.get('http://localhost:8081/');
+  //       products.value = response.data;
+  //     } catch (err) {
+  //       console.error(err);
+  //     }
+  //   });
 
-    const productRows = computed(() => {
-      const rows = [];
-      for (let i = 0; i < products.value.length; i += 1) {
-        rows.push(products.value.slice(i, i + 1));
-      }
-      return rows;
-    });
+  //   const productRows = computed(() => {
+  //     const rows = [];
+  //     for (let i = 0; i < products.value.length; i += 1) {
+  //       rows.push(products.value.slice(i, i + 1));
+  //     }
+  //     return rows;
+  //   });
 
-    return { productRows };
-  }
+  //   return { productRows };
+  // }
 }
 </script>
 <style scoped>

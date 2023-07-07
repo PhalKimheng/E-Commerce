@@ -1,25 +1,24 @@
 <template>
-  <div>
-    <Header></Header>
-    <Footer></Footer>
-  </div>
+    <router-view/>
 </template>
 
 <script>
-import { RouterLink, RouterView } from "vue-router";
+// import { RouterLink, RouterView } from "vue-router";
 // import Index from "./views/Index.vue";
 // import Checkout from "./views/CheckoutView.vue";
-import Header from "./components/HeaderPage.vue";
-import Footer from "./components/FooterPage.vue";
+// import Header from "./components/HeaderPage.vue";
+// import Footer from "./components/FooterPage.vue";
+// import HomeView from './views/HomeView.vue';
 export default {
   data() {
     return {
-      isCheckingOut: false,
     };
   },
+  name: "App",
   components: {
-    Header,
-    Footer,
+    // Header,
+    // Footer,
+    // HomeView,
   },
 };
 </script>
