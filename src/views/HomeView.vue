@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Header/>
+    <Header />
     <div class="body1">
       <div class="box1">
         <div class="child1">
@@ -114,7 +114,7 @@
         </div>
       </div>
     </div>
-    <Footer/>
+    <Footer />
   </div>
 </template>
 <script>
@@ -124,10 +124,14 @@ import Footer from '../components/FooterPage.vue'
 import { onMounted, computed, ref } from 'vue';
 import axios from 'axios';
 export default {
+  data() {
+    return {
+    };
+  },
   name: 'HomeView',
   components: {
     Header,
-    Footer
+    Footer,
   },
 
   // setup() {

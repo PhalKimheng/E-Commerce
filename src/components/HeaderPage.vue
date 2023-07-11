@@ -72,8 +72,21 @@
     </header>
 </template>
 <script>
+
 export default {
-    // name: "Header"
+    data() {
+        return {
+            // isLoginPopupVisible: false,
+        }
+    },
+    methods: {
+        showLoginPopup() {
+            this.isLoginPopupVisible = true;
+        },
+    },
+    components: {
+        // LoginPopup
+    }
 }
 </script>
 <style scoped>
