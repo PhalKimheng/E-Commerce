@@ -1,37 +1,36 @@
 <template>
-    <div>
-      <Header />
-      <div class="wrapper">
-          <div class="pageTitle">
-              <h1>Wishlist</h1>
-  
-          </div>
+  <div>
+    <Header />
+    <div class="wrapper">
+      <div class="pageTitle">
+        <h1>Wishlist</h1>
       </div>
-      <Footer />
     </div>
-  </template>
+    <Footer />
+  </div>
+</template>
   
-  <script>
-  import Header from '../components/HeaderPage.vue'
-  import Footer from '../components/FooterPage.vue'
-  export default {
-    data() {
-      return {
-      };
-    },
-    components: {
-      Header,
-      Footer
-    },
+<script>
+import Header from '../components/HeaderPage.vue'
+import Footer from '../components/FooterPage.vue'
+export default {
+  data() {
+    return {
+    };
+  },
+  components: {
+    Header,
+    Footer
+  },
+}
+</script>
+<style>
+@media (min-width: 1024px) {
+  .product {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
   }
-  </script>
-  <style>
-  @media (min-width: 1024px) {
-    .product {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-    }
-  }
-  </style>
+}
+</style>
   

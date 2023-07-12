@@ -4,8 +4,8 @@
             <div class="leftContent">
                 <h5>C H A M A</h5>
                 <div style="display: flex; column-gap: 10px;">
-                    <input style="width: 70%;" class="form-control" type="search" placeholder="Enter Email Address">
-                    <button class="btn btn-danger">Sign Up</button>
+                    <input style="width: 65%;" class="form-control" type="search" placeholder="Enter Email Address">
+                    <button class="btn btn-danger">Submit</button>
                 </div>
                 <span>Contact Information</span>
                 <span>U5, 555 Road, Khan Russey Keo, Phnom Penh, Cambodia</span>

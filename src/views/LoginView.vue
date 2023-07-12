@@ -40,12 +40,16 @@
 
           <!-- Submit button -->
           <div class="w-100 d-flex justify-content-center">
-            <button type="submit" class="w-50 btn btn-danger btn-block mb-4">Sign In</button>
+            <button type="submit" class="w-50 btn btn-danger btn-block mb-2">Sign In</button>
           </div>
 
           <!-- Register buttons -->
           <div class="text-center">
-            <p>Don't have an account? <a href="#!">Create account</a></p>
+            <p>Don't have an account?
+              <router-link :to="{ path: '/signup' }">
+                <a href="">Create account</a>
+              </router-link>
+            </p>
           </div>
         </form>
       </div>
